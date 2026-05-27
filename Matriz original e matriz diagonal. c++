@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mat[3][3];
+    
+    cout << "Digite os valores da matriz 3x3:\n";
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cin >> mat[i][j];
+        }
+    }
+    
+    cout << "\nMatriz Original:\n";
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
+    cout << "\nMatriz Diagonal:\n";
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            if(i == j)
+                cout << mat[i][j] << " ";
+            else
+                cout << "0 ";
+        }
+        cout << endl;
+    }
+    
+    return 0;
+}
